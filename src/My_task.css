@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #4338CA;
+    --main-text-color: #111827;
+    --secondary-color: #6B7280;
+    --completed-task-color: #22C55E;
+    --pending-task-color: #F59E0B;
+    --overdue-task-color: #EF4444;
+    --pageBackground-color: #F9FAFB;
+}
+
+caption {
+    caption-side: top;
+    /* padding: 2em 0.5em; */
+    font-size: 1.4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.my_task_section {
+    margin-left: 210px;
+    /* background-color: var(--pageBackground-color); */
+}
+
+.my_task_section .addTaskButtonSection {
+    display: flex;
+    justify-content: end;
+    padding: 1em 3.8em;
+}
+
+.my_task_section .addTaskButtonSection .addTaskButton {
+    background-color: #5c6bc0;
+    color: white;
+    border-radius: 20px;
+    /* background-color: white;  */
+    /* width: 200px; */
+    text-align: right;
+    padding: 8px 20px;
+}
+.my_task_section .new_task_section {
+    display: none;
+}
+
+.my_task_section .active_taskForm {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    /* right: 410px; */
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    /* border: 2px solid red; */
+}
+
+.my_task_section .active_taskForm .inner_newTask_sec {
+    background-color: white;
+    padding: 1em 2em;
+    width: 33%;
+    /* height: ; */
+    border-radius: 5px;
+    /* border: 2px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.my_task_section .active_taskForm .inner_newTask_sec form .form_group {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.my_task_section .active_taskForm label {
+    font-size: 1.3rem;
+    color: #141138;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.my_task_section .active_taskForm input {
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 0.1em;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 0.07em;
+    font-size: 1rem;
+}
+
+.my_task_section .active_taskForm select {
+    text-align: center;
+    color: var(--main-text-color);
+    padding: 0.3em;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 0.07em;
+    font-size: 1rem;
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container {
+    background-color: white;
+    width: 89%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 3px 0px, rgba(0, 0, 0, 0.228) 0px 1px 2px 0px;
+    border-radius: 7px;
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table {
+    width: 100%;
+    font-size: 1rem;
+    /* border: 2px solid red; */
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table thead {
+    background-color: rgb(209, 208, 208);
+    color: gray;
+    width: 80%;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    padding: 1em;
+}
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table tr {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.299);
+}
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_head tr th {
+    padding: 4px 1em;
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body tr td {
+    padding: 5px 0.5em;
+    /* text-align: center; */
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .Pending span {
+    background-color: orange;
+    padding: 0.4em;
+    font-size: 0.8rem;
+    color: black;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.258);
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .Completed span {
+    background-color: var(--completed-task-color);
+    padding: 0.4em;
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.258);
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .OverDue span {
+    background-color: var(--overdue-task-color);
+    padding: 0.4em;
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.258);
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .edit_task {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    padding: 4px;
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .edit_task img {
+    width: 16px;
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .delete_task {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    padding: 4px;
+}
+
+.my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .delete_task img {
+    width: 16px;
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 15px;
+    }
+
+    .my_task_section {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+    .my_task_section .active_taskForm .inner_newTask_sec {
+    background-color: white;
+    padding: 1em 2em;
+    width: 70%;
+    }
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_head tr .th_course {
+        display: block !important;
+    }
+
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_head tr .th_dueDate {
+        display: block !important;
+    }
+
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .td_course {
+        display: block !important;
+    }
+
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .td_dueDate {
+        display: block !important;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .my_task_table_sec .inner_task_table_sec .table_container {
+        padding: 0px;
+    }
+
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_head tr .th_course {
+        display: none !important;
+    }
+
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_head tr .th_dueDate {
+        display: none !important;
+    }
+
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .td_course {
+        display: none !important;
+    }
+
+    .my_task_table_sec .inner_task_table_sec .table_container .Task_table .Task_table_body .td_dueDate {
+        display: none !important;
+    }
+}

@@ -1,0 +1,104 @@
+:root {
+    --primary-color: #4338CA;
+    --main-text-color: #111827;
+    --secondary-color: #6B7280;
+    --completed-task-color: #22C55E;
+    --pending-task-color: #F59E0B;
+    --overdue-task-color: #EF4444;
+    --pageBackground-color: #F9FAFB;
+}
+
+body {
+    background-color: var(--pageBackground-color);
+    color: var(--main-text-color);
+}
+
+main {
+    margin-left: 210px;
+    /* border: 2px solid red; */
+}
+
+.hero_section {
+    padding: 20px 40px 20px 40px;
+}
+
+.hero_section .container_top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.hero_section .container_top .boxes {
+    color: var(--secondary-color);
+    margin: 8px 0px;
+}
+
+.main_section_2 {
+    padding: 0 50px;
+    font-size: 0.6rem;
+    margin-top: 0px;
+}
+
+.main_section_2 .container_middle {
+    gap: 20px;
+    justify-content: center;
+}
+
+.main_section_2 .container_middle .block {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 7px;
+    padding: 1em;
+}
+
+.main_section_2 .container_middle #block_1 .up_info_1 {
+    border-radius: 3px;
+    border-top: 1px solid rgba(128, 128, 128, 0.55);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.55);
+}
+
+.main_section_2 .container_middle #block_1 .upcoming_info {
+    display: flex;
+    padding-top: 10px;
+}
+
+.main_section_2 .container_middle #block_1 .upcoming_info span p {
+    padding: 0;
+    margin: 0;
+}
+
+.main_section_2 .container_middle #block_1 .upcoming_info span img {
+    width: 1rem;
+    margin: 0 6px;
+}
+
+.main_section_2 .container_middle #block_2 .mycourse_block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.main_section_2 .container_middle #block_2 .mycourse_block img {
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        margin-left: 0;
+        margin-top: 50px;
+        padding: 6.5%;
+    }
+
+    .hero_section {
+        /* padding: 0;
+        margin: 0; */
+        padding: 0;
+    }
+
+    .main_section_2 .container_middle #block_2 .mycourse_block img {
+        width: 100%;
+    }
+}

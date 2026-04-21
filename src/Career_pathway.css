@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #4338CA;
+    --main-text-color: #111827;
+    --secondary-color: #6B7280;
+    --completed-task-color: #22C55E;
+    --pending-task-color: #F59E0B;
+    --overdue-task-color: #EF4444;
+    --pageBackground-color: #F9FAFB;
+}
+* {
+    margin: 0px;
+    padding: 0;
+}
+body {
+    color: rgb(83, 83, 83);
+    margin: 0;
+    padding: 0;
+    background-color: var(--pageBackground-color);
+}
+.Career_pathway_section {
+    margin-left: 240px;
+}
+.career_card_section{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    padding: 30px;
+    background-color: white;
+    margin: 50px 2px;
+    border-radius: 20px;
+}
+.career_card_section .career_container .block_1 {
+    display: flex;
+    /* justify-content: space-between; */
+}
+.career_card_section .career_container .block_1 .box_2 {
+    /* border: 2px solid red; */
+    width: 100%;
+}
+.career_card_section .career_container .block_1 .box_2 small {
+    font-size: 10px;
+    background-color: var(--pending-task-color);
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+}
+.career_card_section .career_container .block_1 .box_3 {
+    color: red;
+}
+.career_card_section .career_container .block_1 .box_2 p {
+    font-size: 0.8rem;
+}
+.career_card_section .career_container .block_2 .box_2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.career_card_section .career_container .block_2 .box_2 .selectBox_1 button{
+    background-color: var(--pageBackground-color);
+}
+.career_card_section .career_container .block_2 .box_2 .selectBox_2 button{
+    background-color: var(--pageBackground-color);
+}
+.career_card_section .career_container .block_2 .box_2 .selectBox_3 button {
+    background: #a4eafc;
+    background: linear-gradient(155deg, rgba(164, 234, 252, 0.93) 0%, rgba(77, 142, 240, 1) 57%);
+}
+.career_card_section .career_container .block_2 .box_2 .selection_boxes button {
+    width: 100%;
+    display: flex;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.career_card_section .career_container .block_2 .box_2 .selection_boxes button img {
+    width: 37px;
+    height: 37px;
+    padding: 6px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.career_card_section .career_container .block_2 .box_2 .selection_boxes button #briefcase {
+    background-color: rgb(2, 91, 225);
+}
+.career_card_section .career_container .block_2 .box_2 .selection_boxes button #rocket {
+    background-color: var(--primary-color);
+}
+.career_card_section .career_container .block_2 .box_2 .selection_boxes button #laptop {
+    background-color:rgb(72, 144, 251) ;
+}
+
+@media screen and (max-width: 700px) {
+    .Career_pathway_section {
+    margin-left: 0;
+    margin-top: 60px;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    }
+}
