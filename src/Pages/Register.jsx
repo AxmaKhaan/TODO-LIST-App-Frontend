@@ -29,7 +29,7 @@ export default function Register() {
 
     try {
 
-      const res = await fetch("http://localhost:5000/login_users/add", {
+      const res = await fetch("https://todo-list-app-backend-production-c0dd.up.railway.app/login_users/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

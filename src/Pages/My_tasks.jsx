@@ -24,11 +24,11 @@ export default function My_tasks() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let url = "http://localhost:5000/mytask/addtask";
+    let url = "https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/addtask";
     let method = "POST";
 
     if (editId) {
-      url = `http://localhost:5000/mytask/editTask/${editId}`;
+      url = `https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/editTask/${editId}`;
       method = "PUT";
     }
 
@@ -60,7 +60,7 @@ export default function My_tasks() {
 
   const [enteredTask, setEnteredTask] = useState([]);
   const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5000/mytask/tasks");
+    const res = await fetch("https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/tasks");
     const data = await res.json();
     setEnteredTask(data);
   };
@@ -92,7 +92,7 @@ export default function My_tasks() {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/mytask/deletetask/${id}`, {
+      const res = await fetch(`https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/deletetask/${id}`, {
         method: "DELETE"
       });
 
