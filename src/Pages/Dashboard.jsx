@@ -15,7 +15,7 @@ export default function Dashboard() {
   const [overDueTask, setOverDueTask] = useState();
 
   useEffect(() => {
-    fetch("todo-list-app-backend-production-622b.up.railway.app/mytask/taskcount")
+    fetch("https://todo-list-app-backend-production-622b.up.railway.app/mytask/taskcount")
     .then(res => res.json())
     .then(data => {
       setTaskCount(data.totallCount);

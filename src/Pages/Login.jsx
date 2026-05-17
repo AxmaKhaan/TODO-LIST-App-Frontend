@@ -22,7 +22,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("todo-list-app-backend-production-622b.up.railway.app/login_users/login", {
+      const response = await fetch("http://todo-list-app-backend-production-622b.up.railway.app/login_users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -39,7 +39,7 @@ export default function Login() {
         setError("Invalid email or password ❌"); // ✅ show error
       }
     } catch (error) {
-      setError(error); // network error
+      setError(error.message); // network error
     }
   };
     // try {

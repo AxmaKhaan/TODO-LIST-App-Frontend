@@ -9,7 +9,7 @@ export default function Career_pathway() {
         
         // setpopUp("selected")
 
-        await fetch("todo-list-app-backend-production-622b.up.railway.app/save-choice", {
+        await fetch("https://todo-list-app-backend-production-622b.up.railway.app/save-choice", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -34,7 +34,7 @@ export default function Career_pathway() {
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch(
-                `todo-list-app-backend-production-622b.up.railway.app/get-choices/${localStorage.getItem("userId")}`
+                `https://todo-list-app-backend-production-622b.up.railway.app/get-choices/${localStorage.getItem("userId")}`
             );
 
             const data = await res.json();
