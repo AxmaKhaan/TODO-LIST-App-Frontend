@@ -24,11 +24,11 @@ export default function My_tasks() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let url = "https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/addtask";
+    let url = "todo-list-app-backend-production-622b.up.railway.app/mytask/addtask";
     let method = "POST";
 
     if (editId) {
-      url = `https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/editTask/${editId}`;
+      url = `todo-list-app-backend-production-622b.up.railway.app/mytask/editTask/${editId}`;
       method = "PUT";
     }
 
@@ -60,7 +60,7 @@ export default function My_tasks() {
 
   const [enteredTask, setEnteredTask] = useState([]);
   const fetchTasks = async () => {
-    const res = await fetch("https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/tasks");
+    const res = await fetch("todo-list-app-backend-production-622b.up.railway.app/mytask/tasks");
     const data = await res.json();
     setEnteredTask(data);
   };
@@ -92,7 +92,7 @@ export default function My_tasks() {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`https://todo-list-app-backend-production-c0dd.up.railway.app/mytask/deletetask/${id}`, {
+      const res = await fetch(`todo-list-app-backend-production-622b.up.railway.app/mytask/deletetask/${id}`, {
         method: "DELETE"
       });
 
