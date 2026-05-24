@@ -30,11 +30,13 @@ export default function Login() {
         body: JSON.stringify(data)
       });
 
+      
       const result = await response.json();
 
       if (result.success) {
         localStorage.setItem("isAuth", "true");
         navigate("/dashboard");
+        localStorage.setItem("userId", data.userId);
       } else {
         setError("Invalid email or password ❌"); // ✅ show error
       }

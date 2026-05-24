@@ -4,12 +4,14 @@ import "/src/My_task.css";
 
 
 export default function My_tasks() {
+  const userId = localStorage.getItem("userId");
   const [taskdata, setTaskdata] = useState({
     title: "",
     course: "",
     status: "",
     dueDate: "",
-    description: ""
+    description: "",
+    userId
   })
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,7 +52,8 @@ export default function My_tasks() {
       title: "",
       course: "",
       dueDate: "",
-      description: ""
+      description: "",
+      userId
     })
     setEditId(null);
     fetchTasks();
@@ -60,7 +63,7 @@ export default function My_tasks() {
 
   const [enteredTask, setEnteredTask] = useState([]);
   const fetchTasks = async () => {
-    const res = await fetch("https://todo-list-app-backend-production-622b.up.railway.app/mytask/tasks");
+    const res = await fetch("https://todo-list-app-backend-production-622b.up.railway.app/mytask/tasks/${userId}");
     const data = await res.json();
     setEnteredTask(data);
   };
