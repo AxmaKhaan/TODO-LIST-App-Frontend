@@ -36,7 +36,6 @@ export default function Login() {
       if (result.success) {
         localStorage.setItem("isAuth", "true");
         navigate("/dashboard");
-        localStorage.setItem("userId", data.userId);
       } else {
         setError("Invalid email or password ❌"); // ✅ show error
       }

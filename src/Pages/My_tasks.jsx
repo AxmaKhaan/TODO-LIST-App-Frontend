@@ -4,14 +4,12 @@ import "/src/My_task.css";
 
 
 export default function My_tasks() {
-  const userId = localStorage.getItem("userId");
   const [taskdata, setTaskdata] = useState({
     title: "",
     course: "",
     status: "",
     dueDate: "",
-    description: "",
-    userId
+    description: ""
   })
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +51,6 @@ export default function My_tasks() {
       course: "",
       dueDate: "",
       description: "",
-      userId
     })
     setEditId(null);
     fetchTasks();
